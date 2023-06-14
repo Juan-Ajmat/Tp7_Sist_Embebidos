@@ -17,13 +17,14 @@ probar hora invalida y  verificar que las rechaza
 #include <stdio.h>
 #include "reloj.h"
 
+#define TICKS_POR_SEGUNDO 5
 
 //Al inicializar el reloj está en 00:00 y con hora invalida
 
 void test_inicia_hora_invalida(void){
     static const uint8_t ESPERADO[] = {0,0,0,0,0,0};
     uint8_t hora[6];
-    clock_t reloj= ClockCreate(5);
+    clock_t reloj= ClockCreate(TICKS_POR_SEGUNDO);
     TEST_ASSERT_FALSE (ClockGetTime(reloj, hora, 6));
     TEST_ASSERT_EQUAL_UINT8_ARRAY(ESPERADO, hora, 6);
     
@@ -33,10 +34,10 @@ void test_inicia_hora_invalida(void){
 void test_ajustar_hora(void){
     static const uint8_t ESPERADO[] = {1,2,3,4,0,0};
     uint8_t hora[6];
-    clock_t reloj= ClockCreate(5);
+    clock_t reloj= ClockCreate(TICKS_POR_SEGUNDO);
 
     TEST_ASSERT_TRUE (ClockSetTime(reloj, ESPERADO, 4));
-    TEST_ASSERT_FALSE (ClockGetTime(reloj, hora, 6));
+    TEST_ASSERT_TRUE (ClockGetTime(reloj, hora, 6));
     TEST_ASSERT_EQUAL_UINT8_ARRAY(ESPERADO, hora, 6);
     
 }

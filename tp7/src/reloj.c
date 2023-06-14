@@ -7,7 +7,7 @@ struct clock_s{
     
 };
 clock_t ClockCreate(int tics_por_segundo){
-    static struct clock_S self[1];
+    static struct clock_s self[1];
     memset(self, 0, sizeof(self));
     return self;
 
