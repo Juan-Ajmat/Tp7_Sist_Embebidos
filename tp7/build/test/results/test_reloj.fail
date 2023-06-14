@@ -2,17 +2,21 @@
 :source:
   :path: test
   :file: test_reloj.c
-:successes: []
+:successes:
+- :test: test_inicia_hora_invalida
+  :line: 23
+  :message: ''
+  :unity_test_time: 0
 :failures:
-- :test: test_inicializacion
-  :line: 5
-  :message: funciona!
+- :test: test_ajustar_hora
+  :line: 40
+  :message: Element 0 Expected 1 Was 0
   :unity_test_time: 0
 :ignores: []
 :counts:
-  :total: 1
-  :passed: 0
+  :total: 2
+  :passed: 1
   :failed: 1
   :ignored: 0
 :stdout: []
-:time: 0.0014881930000001375
+:time: 0.0006799689999752445
