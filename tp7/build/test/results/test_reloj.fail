@@ -4,12 +4,12 @@
   :file: test_reloj.c
 :successes:
 - :test: test_inicia_hora_invalida
-  :line: 23
+  :line: 24
   :message: ''
   :unity_test_time: 0
 :failures:
 - :test: test_ajustar_hora
-  :line: 40
+  :line: 41
   :message: Element 0 Expected 1 Was 0
   :unity_test_time: 0
 :ignores: []
@@ -19,4 +19,4 @@
   :failed: 1
   :ignored: 0
 :stdout: []
-:time: 0.0017600510000193026
+:time: 0.0008444530000133454

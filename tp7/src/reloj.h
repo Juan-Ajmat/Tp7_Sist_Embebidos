@@ -1,4 +1,4 @@
-#include "stdint.h"
+#include <stdint.h>
 #include "stdbool.h"
 
 typedef struct clock_s * clock_t;
