@@ -14,13 +14,13 @@ clock_t ClockCreate(int tics_por_segundo){
 }
 
 bool ClockGetTime(clock_t reloj, uint8_t * hora, int size){
-    memcpy (reloj->hora_actual, hora, size);
+    memcpy (hora, reloj->hora_actual, size);
     return reloj->valida;
 }
 
-bool ClockSetTime(clock_t reloj, const uint8_t *hora, int size){
+
+bool ClockSetTime(clock_t reloj, const uint8_t * hora, int size){
     memcpy (reloj->hora_actual, hora, size);
     reloj->valida = true;
-    
     return true;
 }

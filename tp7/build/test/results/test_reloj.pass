@@ -7,16 +7,16 @@
   :line: 24
   :message: ''
   :unity_test_time: 0
-:failures:
 - :test: test_ajustar_hora
-  :line: 41
-  :message: Element 0 Expected 1 Was 0
+  :line: 34
+  :message: ''
   :unity_test_time: 0
+:failures: []
 :ignores: []
 :counts:
   :total: 2
-  :passed: 1
-  :failed: 1
+  :passed: 2
+  :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.0008444530000133454
+:time: 0.0009919369999806804

@@ -14,7 +14,7 @@
 
 void test_inicia_hora_invalida(void){
 
-    static const uint8_t ESPERADO[] = {0,0,0,0,0,0};
+    static const uint8_t ESPERADO[6] = {0,0,0,0,0,0};
 
     uint8_t hora[6];
 
@@ -38,7 +38,7 @@ void test_inicia_hora_invalida(void){
 
 void test_ajustar_hora(void){
 
-    static const uint8_t ESPERADO[] = {1,2,3,4,0,0};
+    static const uint8_t ESPERADO[6] = {1,2,3,4,0,0};
 
     uint8_t hora[6];
 

@@ -22,7 +22,7 @@ probar hora invalida y  verificar que las rechaza
 //Al inicializar el reloj está en 00:00 y con hora invalida
 
 void test_inicia_hora_invalida(void){
-    static const uint8_t ESPERADO[] = {0,0,0,0,0,0};
+    static const uint8_t ESPERADO[6] = {0,0,0,0,0,0};
     uint8_t hora[6];
     clock_t reloj= ClockCreate(TICKS_POR_SEGUNDO);
     TEST_ASSERT_FALSE (ClockGetTime(reloj, hora, 6));
@@ -32,7 +32,7 @@ void test_inicia_hora_invalida(void){
 
 // ‣ Al ajustar la hora el reloj queda en hora y es válida.
 void test_ajustar_hora(void){
-    static const uint8_t ESPERADO[] = {1,2,3,4,0,0};
+    static const uint8_t ESPERADO[6] = {1,2,3,4,0,0};
     uint8_t hora[6];
     clock_t reloj= ClockCreate(TICKS_POR_SEGUNDO);
 
